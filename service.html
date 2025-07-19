@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a23;
+      color: white;
+    }
+
+    header {
+      background-color: #0d0d2b;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .logo span {
+      color: #42a5f5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #42a5f5;
+    }
+
+    .cv-btn {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .services-section {
+      padding: 80px 50px;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #42a5f5;
+    }
+
+    .services-section p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 100px;
+    }
+
+    .service-card {
+      background-color: #121234;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #1e1e4e;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #42a5f5;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      color: #42a5f5;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 18px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+     footer {
+            background-color: #0d0d2b;
+            padding: 40px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #42a5f5;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #42a5f5;
+        }
+
+        footer hr {
+            margin: 30px auto;
+            width: 80%;
+            border-color: #333;
+        }
+
+        footer .fa {
+            margin-right: 8px;
+        }
+
+      .cv-btn a{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Jivesh<span>Saini</span></div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cv-btn"><a href="cv.html">View CV</a></button>
+  </header>
+
+  <section class="services-section">
+    <h1>My Services</h1>
+    <p>Here’s what I can offer to help you build a powerful web presence.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Web Design</h3>
+        <p>Creative, clean and modern designs and responsive layout planning.</p>
+      </div>
+      <div class="service-card">
+        <h3>Frontend Development</h3>
+        <p>Pixel-perfect implementation using HTML5, CSS3, JavaScript, CSS, and React.JS.</p>
+      </div>
+      <div class="service-card">
+        <h3>Responsive Layouts</h3>
+        <p>Fully responsive websites optimized for all devices including desktops, tablets, and smartphones.</p>
+      </div>
+      <div class="service-card">
+        <h3>Performance Optimization</h3>
+        <p>Improved site speed, reduced load time, and optimized assets using best coding practices.</p>
+      </div>
+      <div class="service-card">
+        <h3>SEO-Friendly Code</h3>
+        <p>Structure HTML for accessibility and search engine optimization to boost visibility.</p>
+      </div>
+      <div class="service-card">
+        <h3>Additional</h3>
+        <p>Create a Best Application using a C/C++ and OOPS Concept</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ✅ Footer Section -->
+    <footer>
+        <h2>Contact Me</h2>
+
+        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
+        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
+        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
+
+        <hr />
+        <p>© 2025 Jivesh Saini. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
