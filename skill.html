@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- ✅ Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0a0a23;
+      color: white;
+    }
+
+    header {
+      background-color: #0d0d2b;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .logo span {
+      color: #42a5f5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #42a5f5;
+    }
+
+    .cv-btn {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .skills-section {
+      padding: 80px 50px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skills-section h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #42a5f5;
+      text-align: center;
+    }
+
+    .skill {
+      margin-bottom: 30px;
+    }
+
+    .skill-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-size: 20px; /* 👈 Increased skill name font */
+    }
+
+    .skill-title i {
+      font-size: 22px; /* 👈 Increased logo size */
+      color: #42a5f5;
+      margin-right: 10px;
+    }
+
+    .skill-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .progress-bar {
+      background-color: #1a1a40;
+      height: 12px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(to right, #42a5f5, #478ed1);
+      border-radius: 8px;
+      width: 0;
+      transition: width 2s ease-in-out;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0d0d2b;
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 50px;
+    }
+
+     footer {
+            background-color: #0d0d2b;
+            padding: 40px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #42a5f5;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #42a5f5;
+        }
+
+        footer hr {
+            margin: 30px auto;
+            width: 80%;
+            border-color: #333;
+        }
+
+        footer .fa {
+            margin-right: 8px;
+        }
+
+        .cv-btn a{
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+          font-size: 15px;
+        }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Jivesh<span>Saini</span></div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cv-btn"><a href="cv.html">View CV</a></button>
+  </header>
+
+  <section class="skills-section">
+    <h1>My Skills</h1>
+
+    <div class="skill">
+      <div class="skill-title">
+        <div class="skill-name">
+          <i class="fab fa-html5"></i> HTML
+        </div>
+        <span>99%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="99%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-title">
+        <div class="skill-name">
+          <i class="fab fa-css3-alt"></i> CSS
+        </div>
+        <span>92%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="92%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-title">
+        <div class="skill-name">
+          <i class="fab fa-js-square"></i> JavaScript
+        </div>
+        <span>90%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="90%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-title">
+        <div class="skill-name">
+          <i class="fab fa-react"></i> React JS
+        </div>
+        <span>78%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="78%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-title">
+        <div class="skill-name">
+          <i class="fab fa-github"></i> GitHub
+        </div>
+        <span>85%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="85%"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-title">
+        <div class="skill-name">
+          <i class="fab fa-c"></i> C Language
+        </div>
+        <span>86%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" data-progress="86%"></div>
+      </div>
+    </div>
+
+  </section>
+
+ <!-- ✅ Footer Section -->
+    <footer>
+        <h2>Contact Me</h2>
+
+        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
+        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
+        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
+
+        <hr />
+        <p>© 2025 Jivesh Saini. All rights reserved.</p>
+    </footer>
+
+  <!-- ✅ JavaScript for animated progress -->
+  <script>
+    window.addEventListener('load', () => {
+      const bars = document.querySelectorAll('.progress');
+      bars.forEach(bar => {
+        const target = bar.getAttribute('data-progress');
+        bar.style.width = target;
+      });
+    });
+  </script>
+
+</body>
+</html>
