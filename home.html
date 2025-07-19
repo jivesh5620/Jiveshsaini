@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Home Page </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a23;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0d0d2b;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .logo span {
+            color: #42a5f5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #42a5f5;
+        }
+
+        .cv-btn {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 50px;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .hero-text .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-text .buttons button {
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+        .hire-btn {
+            background-color: #42a5f5;
+            color: white;
+        }
+
+        .contact-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #42a5f5;
+        }
+
+        .hero-img img {
+            width: 300px;
+            border-radius: 50%;
+            border: 5px solid #42a5f5;
+            box-shadow: 0 0 20px #42a5f5;
+        }
+
+        .stats {
+            margin-top: 50px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stats div {
+            color: #fff;
+        }
+
+        .stats h3 {
+            font-size: 28px;
+            color: #42a5f5;
+        }
+
+        .stats p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .follow-us {
+            background-color: #0d0d2b;
+            color: #eee;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .follow-us h2 {
+            font-size: 32px;
+            color: #42a5f5;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            font-size: 30px;
+            color: #eee;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #42a5f5;
+            transform: scale(1.3);
+        }
+
+
+        footer {
+            background-color: #0d0d2b;
+            padding: 40px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #42a5f5;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #42a5f5;
+        }
+
+        footer hr {
+            margin: 30px auto;
+            width: 80%;
+            border-color: #333;
+        }
+
+        footer .fa {
+            margin-right: 8px;
+        }
+
+        .cv-btn a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .hire-btn a{
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .contact-btn a{
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+    </style>
+
+    <!-- Font Awesome 6 Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+
+
+    <header>
+        <div class="logo">Jivesh<span>Saini</span></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="cv-btn"><a href="cv.html">View CV</a></button>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm</h1>
+            <h1>Jivesh Saini</h1>
+            <h2>And I'm a <span style="color: #42a5f5;">Frontend Developer</span></h2>
+            <p>I am a passionate Frontend Developer who loves creating beautiful and functional web experiences.
+      I specialize in HTML, CSS, JavaScript, and React JS. My focus is on writing clean, efficient code and delivering responsive designs.
+      Let’s build something amazing together! </p>
+            <div class="buttons">
+                <button class="hire-btn"><a href="project.html">Project</a></button>
+                <button class="contact-btn"><a href="contact.html">Contact Me</a></button>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="ChatGPT Image Jul 18, 2025, 07_34_27 PM.png" alt="profile" />
+        </div>
+    </section>
+
+    <section class="stats">
+        <div>
+            <h3>Fresher</h3>
+            <p> 0 Years of Experience</p>
+        </div>
+        <div>
+            <h3>2+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div>
+            <h3>5+</h3>
+            <p>Technologies Mastered</p>
+        </div>
+        <div>
+            <h3>1+</h3>
+            <p>Satisfied Clients</p>
+        </div>
+    </section>
+
+    <!-- Follow Us Section -->
+    <section class="follow-us" data-aos="fade-up">
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/jiveshsaini2027" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jivesh-saini-315928371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com/@jiveshSaini8" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/@Jiveshsaini2" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/jivesh5620" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+
+    <!-- ✅ Footer Section -->
+    <footer>
+        <h2>Contact Me</h2>
+
+        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 8607703228</a></p>
+        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
+        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
+
+        <hr />
+        <p>© 2025 Jivesh Saini. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+
+</html>
