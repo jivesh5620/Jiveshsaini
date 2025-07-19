@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0a0a23;
+      color: white;
+    }
+
+    header {
+      background-color: #0d0d2b;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .logo span {
+      color: #42a5f5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #42a5f5;
+    }
+
+    .cv-btn {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      padding: 80px 50px;
+      gap: 50px;
+    }
+
+    .about-img img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #42a5f5;
+    }
+
+    .about-content {
+      max-width: 600px;
+    }
+
+    .about-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #42a5f5;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .about-content .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .info-box {
+      flex: 1 1 45%;
+      background-color: #121234;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #1f1f55;
+      color: white;
+    }
+
+    .info-box h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #42a5f5;
+    }
+
+    .info-box p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0d0d2b;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+     footer {
+            background-color: #0d0d2b;
+            padding: 40px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #42a5f5;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #42a5f5;
+        }
+
+        footer hr {
+            margin: 30px auto;
+            width: 80%;
+            border-color: #333;
+        }
+
+        footer .fa {
+            margin-right: 8px;
+        }
+
+        .cv-btn a{
+          text-decoration: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+        }
+
+   
+
+  </style>
+</head>
+<body>
+
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+  <header>
+    <div class="logo">Jivesh<span>Saini</span></div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cv-btn"><a href="cv.html">View CV</a></button>
+  </header>
+
+  <section class="about-section">
+    <section id="about" style="padding: 60px 20px; background-color: #111122; color: #eee;" data-aos="flip-right">
+  <div style="max-width: 900px; margin: auto; text-align: center;">
+    <h2 style="font-size: 36px; margin-bottom: 20px; color: #42a5f5;" data-aos="flip-right">About Me</h2>
+    <p style="font-size: 18px; line-height: 1.6;" data-aos="flip-right">
+      Hello! I'm <strong>Jivesh Saini</strong>, a passionate Frontend Developer who loves creating beautiful and functional web experiences.
+      I specialize in HTML, CSS, JavaScript, and React JS. My focus is on writing clean, efficient code and delivering responsive designs.
+      Let’s build something amazing together!
+    </p>
+  </div>
+</section>
+
+      <div class="info">
+        <div class="info-box">
+          <h3>Experience</h3>
+          <p>Fresher</p>
+        </div>
+        <div class="info-box">
+          <h3>Completed Projects</h3>
+          <p>2+ Web Projects</p>
+        </div>
+        <div class="info-box">
+          <h3>Technologies</h3>
+          <p>HTML, CSS, JS, React, GitHub, C</p>
+        </div>
+        <div class="info-box">
+          <h3>Location</h3>
+          <p>Haryana (India)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- ✅ Footer Section -->
+    <footer>
+        <h2>Contact Me</h2>
+
+        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
+        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
+        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
+
+        <hr />
+        <p>© 2025 Jivesh Saini. All rights reserved.</p>
+    </footer>
+
+ 
+
+</body>
+</html>
