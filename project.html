@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a23;
+      color: white;
+    }
+
+    header {
+      background-color: #0d0d2b;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .logo span {
+      color: #42a5f5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #42a5f5;
+    }
+
+    .cv-btn {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .projects-section {
+      padding: 80px 50px;
+      text-align: center;
+    }
+
+    .projects-section h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #42a5f5;
+    }
+
+    .projects-section p {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 50px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #121234;
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid #1e1e4e;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #42a5f5;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      background-color: #222248;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .project-card h3 {
+      font-size: 20px;
+      color: #42a5f5;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #42a5f5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .project-card a:hover {
+      background-color: #1e88e5;
+    }
+
+     footer {
+            background-color: #0d0d2b;
+            padding: 40px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #42a5f5;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #42a5f5;
+        }
+
+        footer hr {
+            margin: 30px auto;
+            width: 80%;
+            border-color: #333;
+        }
+
+        footer .fa {
+            margin-right: 8px;
+        }
+        .cv-btn a{
+          text-decoration: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+        }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Jivesh<span>Saini</span></div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cv-btn"><a href="cv.html">View CV</a></button>
+  </header>
+
+  <section class="projects-section">
+    <h1>My Projects</h1>
+    <p>Some of the best work I've done using my Skills.</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('ChatGPT\ Image\ Jul\ 19\,\ 2025\,\ 11_56_50\ AM.png');"></div>
+        <h3>Personal Website</h3>
+        <p>A personal website built with HTML, CSS, JS showcasing my resume and skills.</p>
+        <a href="home.html">Live Demo</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('ChatGPT\ Image\ Jul\ 19\,\ 2025\,\ 11_51_16\ AM.png');"></div>
+        <h3>Hotel Management System</h3>
+        <p>A responsive Hotel Management System using a C programming helpful for restaurant </p>
+        <a href="management.html">Upload Soon</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="background-image: url('ChatGPT\ Image\ Jul\ 19\,\ 2025\,\ 12_06_06\ PM.png');"></div>
+        <h3>Billing System</h3>
+        <p>A simple Billing system using a C programming to make a attending a customer easy</p>
+        <a href="billingsystem.html">Upload Soon</a>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ✅ Footer Section -->
+    <footer>
+        <h2>Contact Me</h2>
+
+        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
+        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
+        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
+
+        <hr />
+        <p>© 2025 Jivesh Saini. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
