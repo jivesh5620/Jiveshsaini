@@ -1,204 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jivesh CV</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <style>
-    :root {
-      --primary: #00bcd4;
-      --dark-bg: #0f172a;
-      --light-bg: #1e293b;
-      --text-color: #e2e8f0;
-      --accent: #38bdf8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--dark-bg);
-      color: var(--text-color);
-      padding: 30px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      background: var(--light-bg);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      font-size: 42px;
-      color: var(--accent);
-    }
-
-    header p {
-      font-size: 18px;
-      color: #cbd5e1;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    section h2 {
-      font-size: 28px;
-      color: var(--primary);
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-
-    .skills ul,
-    .projects ul {
-      list-style: none;
-    }
-
-    .skills li,
-    .projects li {
-      background-color: #0f1e37;
-      margin: 10px 0;
-      padding: 12px 20px;
-      border-left: 5px solid var(--accent);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 18px;
-    }
-
-    .skills i {
-      margin-right: 15px;
-      font-size: 24px;
-      color: var(--accent);
-    }
-
-    .education p,
-    .contact p {
-      font-size: 18px;
-      padding: 8px 0;
-    }
-
-    .contact i {
-      color: var(--primary);
-      margin-right: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 16px;
-      color: #94a3b8;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
-      }
-
-      header h1 {
-        font-size: 32px;
-      }
-
-      section h2 {
-        font-size: 22px;
-      }
-
-      .skills li,
-      .projects li {
-        font-size: 16px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Jivesh Saini CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#081220;color:#eef5ff;padding:30px}
+.top{display:flex;justify-content:flex-end;margin-bottom:18px}
+.pdf{background:linear-gradient(135deg,#2ea7ff,#00d4ff);color:#fff;border:none;padding:14px 22px;border-radius:12px;font-weight:600;cursor:pointer}
+#cv{max-width:1100px;margin:auto;background:#0f1b33;border:1px solid #1d3b66;border-radius:24px;padding:40px;box-shadow:0 0 30px rgba(0,170,255,.25)}
+.hero{display:flex;gap:30px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #1d3b66;padding-bottom:28px}
+.photo{width:140px;height:140px;border-radius:50%;background:#16345f;border:4px solid #37b6ff;display:flex;align-items:center;justify-content:center;font-size:58px}
+.hero h1{font-size:44px;color:#37b6ff}.hero p{color:#c9d8ef}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:28px;margin-top:28px}
+.sec{background:#122342;border-radius:18px;padding:24px;margin-bottom:20px}
+.sec h2{color:#37b6ff;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:#193257;border:1px solid #2ea7ff;border-radius:30px;padding:8px 14px}
+.timeline .item,.project{border-left:3px solid #37b6ff;padding-left:16px;margin:18px 0}
+.contact p,.about p,.project p{line-height:1.8;color:#d9e6f7}
+ul{padding-left:18px;line-height:1.9}
+a{color:#67d3ff;text-decoration:none}
+footer{text-align:center;color:#9db4d6;margin-top:20px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}}
+@media print{.top{display:none}body{padding:0;background:#fff}#cv{box-shadow:none;border:none}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Jivesh Saini</h1>
-      <p>Aspiring Data Analyst | AI/ML Engineering Student</p>
-    </header>
+<div class="top"><button class="pdf" onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> Export as PDF</button></div>
+<div id="cv">
+<div class="hero" data-aos="fade-down">
+<div class="photo"><i class="fa-solid fa-user"></i></div>
+<div>
+<h1>Jivesh Saini</h1>
+<p>Aspiring Data Analyst | AI & ML Engineering Student</p><br>
+<p><i class="fa-solid fa-location-dot"></i> Rewari, Haryana, India</p>
+<p><i class="fa-solid fa-envelope"></i> jiveshsaini00@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> +91 89507 03228</p>
+<p><i class="fa-brands fa-github"></i> <a href="https://github.com/jivesh5620">github.com/jivesh5620</a></p>
+<p><i class="fa-brands fa-linkedin"></i> <a href="#">Add Your LinkedIn Profile</a></p>
+</div>
+</div>
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>I am an aspiring Data Analyst currently pursuing a B.Tech in Artificial Intelligence & Machine Learning at SAITM, Gurgaon. I enjoy transforming raw data into meaningful insights using SQL, Python, Excel, Power BI. Passionate about data visualization, dashboard development, and solving real-world problems through analytics.</p>
-    </section>
+<div class="grid">
+<div>
+<div class="sec about" data-aos="fade-up">
+<h2>About Me</h2>
+<p>Hello! I'm Jivesh Saini, an aspiring Data Analyst pursuing B.Tech in Artificial Intelligence & Machine Learning at SAITM, Gurugram. I enjoy transforming raw data into meaningful insights using Python, SQL, Excel, Power BI, Pandas, NumPy and visualization libraries. I love solving business problems through dashboards and analytics and continuously improve my skills by building practical projects.</p>
+</div>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li><i></i> Python - 95%</li>
-        <li><i ></i> SQL (Structured Query Language) - 92%</li>
-        <li><i ></i> Power BI - 86%</li>
-        <li><i ></i> Excel - 87%</li>
-        <li><i></i> GitHub - 85%</li>
-        <li><i></i> Numpy - 89%</li>
-         <li><i></i> Pandas - 87%</li>
-         <li><i></i> Matplotlib - 86%</li>
-         <li><i></i> Seaborn - 89%</li>
-         <li><i></i> Plotly - 84%</li>
-         <li><i></i> Jupyter Notebook- 96%</li>
-        
-      </ul>
-    </section>
+<div class="sec" data-aos="fade-up">
+<h2>Career Objective</h2>
+<p>To begin my career as a Data Analyst where I can apply my analytical thinking, SQL, Python, Excel and Power BI skills to deliver meaningful business insights while continuously learning and growing.</p>
+</div>
 
-    <section class="education">
-      <h2>Education</h2>
-      <p><strong> B.Tech in Artificial Intelligence & Machine Learning</strong><br>
-        St. Andrews Institute of Technology and Management (SAITM), Gurgaon<br>
-        2025 – Present</p>
-      <p><strong>Senior Secondary (12th)</strong><br>
-        Maharaja Agarsen public School Rewari, (Haryana)<br>
-         Board : HBSE (Haryana Board of School Education) <br>
-        Stream : Science PCM <br>
-        Percentage/CGPA : 79% <br>
-       Batch :  2024 – 2025</p>
-      <p><strong> Secondary (10th)</strong><br>
-         School : Maharaja Agarsen public School Rewari, (Haryana)<br>
-        Board : HBSE (Haryana Board of School Education) <br>
-        Percentage/CGPA : 94% <br>
-         Batch : 2022 – 2023</p>
-    </section>
+<div class="sec timeline" data-aos="fade-up">
+<h2>Education</h2>
+<div class="item"><strong>B.Tech AI & ML</strong><br>SAITM Gurugram (2025–Present)</div>
+<div class="item"><strong>Class 12</strong><br>HBSE • PCM • 79%</div>
+<div class="item"><strong>Class 10</strong><br>HBSE • 94%</div>
+</div>
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Sales Dashboard (Power BI)</strong> - Developed an interactive dashboard to analyze sales trends, revenue, and profit across multiple regions.</li>
-        <li><strong>HR Analytics Dashboard</strong> – Analyzed employee attrition, performance, and workforce metrics using Power BI.</li>
-        <li><strong>Netflix Data Analysis</strong>- Performed Exploratory Data Analysis (EDA) using Python, Pandas, and Matplotlib to identify content trends. </li>
-         <li><strong>I Phone sales Analysis</strong>- Performed Exploratory Data Analysis (EDA) using Python, Pandas, and Matplotlib to identify content trends. </li>
-      </ul>
-    </section>
+<div class="sec" data-aos="fade-up">
+<h2>Projects</h2>
+<div class="project"><strong>Sales Dashboard</strong><p>Power BI dashboard for KPI, sales and revenue analysis.</p></div>
+<div class="project"><strong>HR Analytics Dashboard</strong><p>Employee attrition and workforce analytics.</p></div>
+<div class="project"><strong>Netflix Data Analysis</strong><p>EDA using Python, Pandas and Matplotlib.</p></div>
+<div class="project"><strong>iPhone Sales Analysis</strong><p>Customer and product sales insights.</p></div>
+</div>
+</div>
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> jiveshsaini00@gmail.com</p>
-      <p><i class="fas fa-phone"></i> +91 89507 03228</p>
-      <p><i class="fab fa-github"></i>  jivesh5620</p>
-    </section>
+<div>
+<div class="sec" data-aos="fade-left">
+<h2>Technical Skills</h2>
+<div class="tags">
+<span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power BI</span>
+<span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+<span class="tag">Plotly</span><span class="tag">Jupyter</span><span class="tag">Git</span><span class="tag">GitHub</span>
+</div>
+</div>
 
-    <footer>
-      <p>Designed by Jivesh Saini © 2026</p>
-    </footer>
-  </div>
-</body>
-</html>
+<div class="sec" data-aos="fade-left">
+<h2>Certifications</h2>
+<ul>
+<li>Data Analytics Training</li>
+<li>SQL for Data Analysis</li>
+<li>Microsoft Excel</li>
+<li>Power BI</li>
+<li>Python Programming</li>
+</ul>
+</div>
+
+<div class="sec" data-aos="fade-left">
+<h2>Hobbies</h2>
+<ul>
+<li>Coding</li>
+<li>Data Analytics Projects</li>
+<li>Reading Books</li>
+<li>Playing Cricket</li>
+<li>Learning New Technologies</li>
+</ul>
+</div>
+
+<div class="sec contact" data-aos="fade-left">
+<h2>Languages</h2>
+<ul><li>English</li><li>Hindi</li></ul>
+</div>
+</div>
+</div>
+<footer>Designed by Jivesh Saini © 2026</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:800,once:true});
+function downloadPDF(){
+html2pdf().set({
+margin:0.3,
+filename:'Jivesh_Saini_CV.pdf',
+image:{type:'jpeg',quality:1},
+html2canvas:{scale:2},
+jsPDF:{unit:'in',format:'a4',orientation:'portrait'}
+}).from(document.getElementById('cv')).save();
+}
+</script>
+</body></html>
