@@ -1,260 +1,131 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About Page</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    body {
-      background-color: #0a0a23;
-      color: white;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#0a0a23;color:#fff;overflow-x:hidden}
+header{background:#0d0d2b;padding:20px 50px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:700}.logo span{color:#42a5f5}
+nav ul{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+nav a{text-decoration:none;color:#fff;transition:.3s}
+nav a:hover{color:#42a5f5}
+.cv-btn{background:#ff4081;border:none;padding:10px 18px;border-radius:6px}
+.cv-btn a{text-decoration:none;color:#fff;font-weight:600}
 
-    header {
-      background-color: #0d0d2b;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.about{max-width:1200px;margin:auto;padding:80px 25px;display:grid;grid-template-columns:360px 1fr;gap:50px;align-items:center}
+.profile{position:relative}
+.profile img{width:100%;border-radius:24px;border:2px solid rgba(66,165,245,.4);box-shadow:0 0 35px rgba(66,165,245,.35)}
+.profile:before{content:"";position:absolute;inset:-10px;border-radius:30px;background:linear-gradient(135deg,#42a5f5,#00d4ff,#42a5f5);z-index:-1;filter:blur(30px);opacity:.35;animation:pulse 4s infinite}
+.content h1{font-size:46px;color:#42a5f5}
+.content h3{margin:10px 0 20px;color:#d7e7ff}
+.content p{line-height:1.9;color:#c7d5ec;font-size:17px}
 
-    .logo {
-      font-size: 26px;
-      font-weight: 600;
-      color: white;
-    }
-
-    .logo span {
-      color: #42a5f5;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #42a5f5;
-    }
-
-    .cv-btn {
-      padding: 10px 20px;
-      background-color: #ff4081;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .about-section {
-      display: flex;
-      align-items: center;
-      padding: 80px 50px;
-      gap: 50px;
-    }
-
-    .about-img img {
-      width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px #42a5f5;
-    }
-
-    .about-content {
-      max-width: 600px;
-    }
-
-    .about-content h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #42a5f5;
-    }
-
-    .about-content p {
-      font-size: 16px;
-      color: #ccc;
-      line-height: 1.8;
-      margin-bottom: 25px;
-    }
-
-    .about-content .info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .info-box {
-      flex: 1 1 45%;
-      background-color: #121234;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #1f1f55;
-      color: white;
-    }
-
-    .info-box h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #42a5f5;
-    }
-
-    .info-box p {
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0d0d2b;
-      margin-top: 50px;
-      font-size: 14px;
-      color: #aaa;
-    }
-
-     footer {
-            background-color: #0d0d2b;
-            padding: 40px 20px;
-            color: #ccc;
-            text-align: center;
-        }
-
-        footer h2 {
-            color: #42a5f5;
-            margin-bottom: 20px;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #ccc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #42a5f5;
-        }
-
-        footer hr {
-            margin: 30px auto;
-            width: 80%;
-            border-color: #333;
-        }
-
-        footer .fa {
-            margin-right: 8px;
-        }
-
-        .cv-btn a{
-          text-decoration: none;
-          color: white;
-          font-size: 15px;
-          font-weight: bold;
-        }
-
-   
-
-  </style>
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:35px}
+.card{background:rgba(255,255,255,.05);backdrop-filter:blur(12px);padding:24px;border-radius:20px;position:relative;border:1px solid rgba(255,255,255,.08);transition:.4s}
+.card:before{content:"";position:absolute;inset:0;padding:2px;border-radius:20px;background:linear-gradient(135deg,#42a5f5,#00d4ff,#42a5f5);background-size:250%;animation:border 5s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(66,165,245,.3)}
+.card h4{color:#42a5f5;margin-bottom:12px;font-size:20px}
+.card p{font-size:15px;line-height:1.8;color:#d2dceb}
+.skills{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.skills span{padding:10px 16px;background:#11163d;border:1px solid rgba(66,165,245,.35);border-radius:30px;transition:.3s}
+.skills span:hover{background:#42a5f5;transform:translateY(-3px)}
+footer{background:#0d0d2b;text-align:center;padding:40px 20px;margin-top:60px;color:#ccc}
+footer h2{color:#42a5f5;margin-bottom:15px}
+footer p{margin:8px 0}
+footer a{color:#ccc;text-decoration:none}
+@keyframes border{to{background-position:250%}}
+@keyframes pulse{50%{transform:scale(1.04);opacity:.5}}
+@media(max-width:900px){.about{grid-template-columns:1fr}.profile{max-width:320px;margin:auto}.content h1{text-align:center}.content h3{text-align:center}.stats{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
-     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
+<header>
+<div class="logo">Jivesh<span>Saini</span></div>
+<nav><ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skill.html">Skills</a></li>
+<li><a href="service.html">Services</a></li>
+<li><a href="project.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></nav>
+<button class="cv-btn"><a href="cv.html">View CV</a></button>
+</header>
 
-  <header>
-    <div class="logo">Jivesh<span>Saini</span></div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="cv-btn"><a href="cv.html">View CV</a></button>
-  </header>
+<section class="about">
+<div class="profile" data-aos="zoom-in">
+<img src="jj.jpeg" alt="Profile Photo">
+</div>
 
-  <section class="about-section">
-    <section id="about" style="padding: 60px 20px; background-color: #111122; color: #eee;" data-aos="flip-right">
-  <div style="max-width: 900px; margin: auto; text-align: center;">
-    <h2 style="font-size: 36px; margin-bottom: 20px; color: #42a5f5;" data-aos="flip-right">About Me</h2>
-    <p style="font-size: 18px; line-height: 1.6;" data-aos="flip-right">
-      Hello! I'm <strong>Jivesh Saini</strong>, an aspiring Data Analyst and AI/ML Engineering student passionate about turning raw data into meaningful insights. I enjoy working with datasets, identifying trends, and creating interactive dashboards that support data-driven decision-making.
+<div class="content" data-aos="fade-left">
+<h1>About Me</h1>
+<h3>Aspiring Data Analyst | AI & ML Engineering Student</h3>
 
-My technical Skills includes SQL, Python, Excel, Power BI and Data Visualization. I continuously improve my skills by building real-world analytics projects, solving problems, and learning modern data analysis techniques. My goal is to help organizations make smarter decisions through data.
-    </p>
-  </div>
+<p>
+Hello! I'm <strong>Jivesh Saini</strong>, an aspiring Data Analyst passionate about transforming raw data into meaningful insights. I enjoy solving business problems through data analysis, interactive dashboards, and visualization. I continuously strengthen my analytical thinking by working on real-world projects and learning modern analytics tools.
+</p>
+
+<p>
+My core expertise includes <strong>Python, SQL, Microsoft Excel, Power BI, Pandas, NumPy</strong>, and data visualization. I enjoy exploring datasets, cleaning data, building reports, and presenting insights that help organizations make informed decisions. I'm always eager to learn new technologies and grow into a professional Data Analyst.
+</p>
+
+<div class="skills">
+<span>Python</span>
+<span>SQL</span>
+<span>Excel</span>
+<span>Power BI</span>
+<span>Pandas</span>
+<span>NumPy</span>
+<span>Matplotlib</span>
+<span>Git & GitHub</span>
+</div>
+
+<div class="stats">
+
+<div class="card" data-aos="fade-up">
+<h4><i class="fas fa-briefcase"></i> Experience</h4>
+<p>Fresher actively seeking Data Analyst internships and entry-level opportunities.</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="100">
+<h4><i class="fas fa-chart-column"></i> Projects</h4>
+<p>4+ analytics projects including Sales Dashboard, HR Analytics, Netflix Analysis and iPhone Sales Dashboard.</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="200">
+<h4><i class="fas fa-graduation-cap"></i> Education</h4>
+<p>B.Tech in Computer Science Engineering (AI & ML). Passionate about analytics, automation and AI.</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="300">
+<h4><i class="fas fa-location-dot"></i> Location</h4>
+<p>Rewari, Haryana, India<br>Open to internships and remote opportunities.</p>
+</div>
+
+</div>
+</div>
 </section>
 
-      <div class="info">
-        <div class="info-box">
-          <h3>💼 Experience</h3>
-          <p>Fresher <br> Open to Data Analyst Internships</p>
-        </div>
-        <div class="info-box">
-          <h3>📊Completed Projects</h3>
-          <p>4+ Data Analytics Projects <br>
-          Sales Dashboard <br>
-          HR Analytics Dashboard <br>
-          Netflix Data Analysis <br>
-          I Phone Sales Analysis</p>
-        </div>
-        <div class="info-box">
-          <h3>🛠Technologies</h3>
-          <p>Python
-SQL Power BI Excel Pandas <br>
-NumPy Matplotlib GitHub</p>
-        </div>
-        <div class="info-box">
-          <h3>📍Location</h3>
-          <p> Rewari Haryana (India)</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer>
+<h2>Contact Me</h2>
+<p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
+<p><i class="fas fa-phone"></i> +91 89507 03228</p>
+<p><i class="fab fa-whatsapp"></i> +91 86077 03228</p>
+<p>© 2026 Jivesh Saini. All rights reserved.</p>
+</footer>
 
-   <!-- ✅ Footer Section -->
-    <footer>
-        <h2>Contact Me</h2>
-
-        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
-        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
-        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar Rewari (Haryana), India</p>
-
-        <hr />
-        <p>© 2026 Jivesh Saini. All rights reserved.</p>
-    </footer>
-
- 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1000,once:true});</script>
 
 </body>
 </html>
