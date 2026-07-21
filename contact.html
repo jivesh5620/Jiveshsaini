@@ -245,6 +245,10 @@ required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
+    <p id="successMessage" style="display:none; color:#4CAF50; margin-top:20px; font-weight:bold;">
+    ✅ Thanks for reaching out! I'll connect with you shortly.
+</p>
+
     <div class="social-icons">
       <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -308,8 +312,12 @@ form.addEventListener("submit", async function(e){
     }
 
 });
+       document.getElementById("successMessage").style.display = "block";
+form.reset();
 
 </script>
+
+
 
 
 </body>
