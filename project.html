@@ -1,246 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project Page</title>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#0a0a23;color:#fff}
+header{background:#0d0d2b;padding:20px 50px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:700}.logo span{color:#42a5f5}
+nav ul{display:flex;gap:28px;list-style:none;flex-wrap:wrap}nav a{color:#fff;text-decoration:none}nav a:hover{color:#42a5f5}
+.cv-btn{background:#ff4081;border:none;padding:10px 18px;border-radius:6px}.cv-btn a{color:#fff;text-decoration:none}
+.projects{max-width:1200px;margin:auto;padding:80px 25px}
+h1{text-align:center;color:#42a5f5;font-size:44px}.sub{text-align:center;color:#cbd5e1;max-width:760px;margin:15px auto 55px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:30px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:28px;transition:.4s;position:relative;backdrop-filter:blur(10px)}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(66,165,245,.35)}
+.card:before{content:"";position:absolute;inset:0;padding:2px;border-radius:22px;background:linear-gradient(135deg,#42a5f5,#00d4ff,#42a5f5);background-size:250%;animation:b 5s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+@keyframes b{100%{background-position:250%}}
+.status{display:inline-block;background:#1db954;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:10px}
+.status.soon{background:#ff9800}
+.badge{display:inline-block;background:#42a5f5;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;margin-left:8px}
+h3{margin:18px 0 12px}p{color:#cbd5e1;line-height:1.8}
+.tech{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.tech span{padding:7px 12px;background:#11163d;border:1px solid rgba(66,165,245,.3);border-radius:20px;font-size:13px}
+.code{display:flex;justify-content:center;align-items:center;gap:10px;width:100%;padding:14px;background:#11163d;border:1px solid #42a5f5;border-radius:10px;color:#42a5f5;text-decoration:none;font-weight:600;transition:.3s}
+.code:hover{background:#42a5f5;color:#fff}
+footer{margin-top:60px;background:#0d0d2b;padding:35px;text-align:center;color:#ccc}footer h2{color:#42a5f5;margin-bottom:10px}
+</style></head><body>
+<header><div class="logo">Jivesh<span>Saini</span></div><nav><ul>
+<li><a href="home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="skill.html">Skills</a></li><li><a href="service.html">Services</a></li><li><a href="project.html">Projects</a></li><li><a href="contact.html">Contact</a></li>
+</ul></nav><button class="cv-btn"><a href="cv.html">View CV</a></button></header>
+<section class="projects">
+<h1 data-aos="fade-up">My Projects</h1>
+<p class="sub" data-aos="fade-up">A collection of analytics projects showcasing my skills in Power BI, SQL, Python, Excel, dashboards, and business intelligence.</p>
+<div class="grid">
+<div class="card" data-aos="fade-up">
+<div class="content">
+<span class="status ">On Working</span>
+<span class="badge">Power BI</span>
+<h3>Sales Dashboard</h3>
+<p>Built an interactive Power BI dashboard to analyze sales performance, revenue trends and regional insights.</p>
+<div class="tech"><span>Power BI</span><span>Excel</span><span></span></div>
+<div class="btns"><a href="https://github.com/jivesh5620/sales-dashboard" target="_blank" class="code"><i class="fab fa-github"></i> View Repository</a></div>
+</div></div>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<div class="card" data-aos="fade-up">
+<div class="content">
+<span class="status ">Coming Soon</span>
+<span class="badge">SQL + Power BI</span>
+<h3>HR Analytics Dashboard</h3>
+<p>Analyzed employee attrition, performance, and workforce metrics using SQL and Power BI.</p>
+<div class="tech"><span>SQL</span><span>Power BI</span><span>Excel</span></div>
+<div class="btns"><a href="https://github.com/jivesh5620/hr-analytics-dashboard" target="_blank" class="code"><i class="fab fa-github"></i> View Repository</a></div>
+</div></div>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
-    }
+<div class="card" data-aos="fade-up">
+<div class="content">
+<span class="status ">Coming Soon</span>
+<span class="badge">Python</span>
+<h3>Netflix Data Analysis</h3>
+<p>Explored Netflix content trends, genres, ratings and release patterns using Python.</p>
+<div class="tech"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+<div class="btns"><a href="https://github.com/jivesh5620/netflix-data-analysis" target="_blank" class="code"><i class="fab fa-github"></i> View Repository</a></div>
+</div></div>
 
-    body {
-      background-color: #0a0a23;
-      color: white;
-    }
+<div class="card" data-aos="fade-up">
+<div class="content">
+<span class="status soon">Coming Soon</span>
+<span class="badge">Python + SQL</span>
+<h3>Customer Churn Analysis</h3>
+<p>Predict customer churn and discover retention insights using analytics.</p>
+<div class="tech"><span>Python</span><span>SQL</span><span>Power BI</span></div>
+<div class="btns"><a href="#" target="_blank" class="code"><i class="fab fa-github"></i> Repository Coming Soon</a></div>
+</div></div>
 
-    header {
-      background-color: #0d0d2b;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+<div class="card" data-aos="fade-up">
+<div class="content">
+<span class="status soon">Coming Soon</span>
+<span class="badge">Power BI</span>
+<h3>E-Commerce Sales Analysis</h3>
+<p>Analyze online sales, customer behavior and product performance.</p>
+<div class="tech"><span>Excel</span><span>SQL</span><span>Power BI</span></div>
+<div class="btns"><a href="#" target="_blank" class="code"><i class="fab fa-github"></i> Repository Coming Soon</a></div>
+</div></div>
 
-    .logo {
-      font-size: 26px;
-      font-weight: 600;
-      color: white;
-    }
-
-    .logo span {
-      color: #42a5f5;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #42a5f5;
-    }
-
-    .cv-btn {
-      padding: 10px 20px;
-      background-color: #ff4081;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .projects-section {
-      padding: 80px 50px;
-      text-align: center;
-    }
-
-    .projects-section h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #42a5f5;
-    }
-
-    .projects-section p {
-      font-size: 16px;
-      color: #ccc;
-      margin-bottom: 50px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .project-card {
-      background-color: #121234;
-      padding: 20px;
-      border-radius: 15px;
-      border: 1px solid #1e1e4e;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px #42a5f5;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 180px;
-      background-color: #222248;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .project-card h3 {
-      font-size: 20px;
-      color: #42a5f5;
-      margin-bottom: 10px;
-    }
-
-    .project-card p {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 15px;
-    }
-
-    .project-card a {
-      display: inline-block;
-      padding: 8px 15px;
-      background-color: #42a5f5;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .project-card a:hover {
-      background-color: #1e88e5;
-    }
-
-     footer {
-            background-color: #0d0d2b;
-            padding: 40px 20px;
-            color: #ccc;
-            text-align: center;
-        }
-
-        footer h2 {
-            color: #42a5f5;
-            margin-bottom: 20px;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #ccc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #42a5f5;
-        }
-
-        footer hr {
-            margin: 30px auto;
-            width: 80%;
-            border-color: #333;
-        }
-
-        footer .fa {
-            margin-right: 8px;
-        }
-        .cv-btn a{
-          text-decoration: none;
-          color: white;
-          font-size: 15px;
-          font-weight: bold;
-        }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="logo">Jivesh<span>Saini</span></div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="cv-btn"><a href="cv.html">View CV</a></button>
-  </header>
-
-  <section class="projects-section">
-    <h1>My Projects</h1>
-    <p>Some of the best work I've done using my Skills.</p>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image" style="background-image: url('ChatGPT\ Image\ Jul\ 19\,\ 2025\,\ 11_56_50\ AM.png');"></div>
-        <h3>Personal Website</h3>
-        <p>A personal website built with HTML, CSS, JS showcasing my resume and skills.</p>
-        <a href="home.html">Live Demo</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image" style="background-image: url('ChatGPT\ Image\ Jul\ 19\,\ 2025\,\ 11_51_16\ AM.png');"></div>
-        <h3>Hotel Management System</h3>
-        <p>A responsive Hotel Management System using a C programming helpful for restaurant </p>
-        <a href="management.html">Upload Soon</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image" style="background-image: url('ChatGPT\ Image\ Jul\ 19\,\ 2025\,\ 12_06_06\ PM.png');"></div>
-        <h3>Billing System</h3>
-        <p>A simple Billing system using a C programming to make a attending a customer easy</p>
-        <a href="billingsystem.html">Upload Soon</a>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- ✅ Footer Section -->
-    <footer>
-        <h2>Contact Me</h2>
-
-        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
-        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
-        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
-
-        <hr />
-        <p>© 2025 Jivesh Saini. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<div class="card" data-aos="fade-up">
+<div class="content">
+<span class="status soon">Coming Soon</span>
+<span class="badge">Power BI</span>
+<h3>Financial Performance Dashboard</h3>
+<p>Interactive dashboard to monitor revenue, profit, expenses and KPIs.</p>
+<div class="tech"><span>Power BI</span><span>Excel</span><span></span></div>
+<div class="btns"><a href="#" target="_blank" class="code"><i class="fab fa-github"></i> Repository Coming Soon</a></div>
+</div></div>
+</div>
+</section>
+<footer><h2>Contact Me</h2><p>Jivesh Saini</p><p>jiveshsaini00@gmail.com</p><p>© 2026 Jivesh Saini. All rights reserved.</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script><script>AOS.init({duration:900,once:true})</script>
+</body></html>
