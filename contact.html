@@ -11,6 +11,52 @@
   <!-- Font Awesome CDN -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
+  <script>
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyMAsA4d-cC1x2j819yTZO3nRDw8DNagw3GI-ZjgU7JegTL14OVTDkr3N2CG-V5tuDJdg/exec";
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+    };
+
+    try{
+
+        const response = await fetch(scriptURL,{
+            method:"POST",
+            body:JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if(result.success){
+
+            alert("Message Sent Successfully!");
+
+            form.reset();
+
+        }
+
+    }catch(error){
+
+        alert("Error sending message.");
+
+        console.log(error);
+
+    }
+
+});
+
+</script>
+
   <style>
     * {
       margin: 0;
@@ -211,11 +257,30 @@
     <h1>Contact Me</h1>
     <p>Feel free to reach out for any project, collaboration, or just to say hello!</p>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="text" placeholder="Subject" />
-      <textarea rows="6" placeholder="Your Message" required></textarea>
+  <form class="contact-form" id="contactForm">
+      <!-- <input type="text" placeholder="Your Name" required /> -->
+    <input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+      <!-- <input type="email" placeholder="Your Email" required /> -->
+    <input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+      <!-- <input type="text" placeholder="Subject" /> -->
+    <input
+type="text"
+name="subject"
+placeholder="Subject">
+      <!-- <textarea rows="6" placeholder="Your Message" required></textarea> -->
+    <textarea
+name="message"
+rows="6"
+placeholder="Your Message"
+required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
