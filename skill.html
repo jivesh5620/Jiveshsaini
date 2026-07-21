@@ -1,425 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skill Page</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-
-  <!-- ✅ Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #0a0a23;
-      color: white;
-    }
-
-    header {
-      background-color: #0d0d2b;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 26px;
-      font-weight: 600;
-      color: white;
-    }
-
-    .logo span {
-      color: #42a5f5;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #42a5f5;
-    }
-
-    .cv-btn {
-      padding: 10px 20px;
-      background-color: #ff4081;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .skills-section {
-      padding: 80px 50px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .skills-section h1 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      color: #42a5f5;
-      text-align: center;
-    }
-
-    .skill {
-      margin-bottom: 30px;
-    }
-
-    .skill-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      margin-bottom: 5px;
-      font-size: 20px; /* 👈 Increased skill name font */
-    }
-
-    .skill-title i {
-      font-size: 22px; /* 👈 Increased logo size */
-      color: #42a5f5;
-      margin-right: 10px;
-    }
-
-    .skill-name {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .progress-bar {
-      background-color: #1a1a40;
-      height: 12px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .progress {
-      height: 100%;
-      background: linear-gradient(to right, #42a5f5, #478ed1);
-      border-radius: 8px;
-      width: 0;
-      transition: width 2s ease-in-out;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0d0d2b;
-      font-size: 14px;
-      color: #aaa;
-      margin-top: 50px;
-    }
-
-     footer {
-            background-color: #0d0d2b;
-            padding: 40px 20px;
-            color: #ccc;
-            text-align: center;
-        }
-
-        footer h2 {
-            color: #42a5f5;
-            margin-bottom: 20px;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #ccc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #42a5f5;
-        }
-
-        footer hr {
-            margin: 30px auto;
-            width: 80%;
-            border-color: #333;
-        }
-
-        footer .fa {
-            margin-right: 8px;
-        }
-
-        .cv-btn a{
-          text-decoration: none;
-          color: white;
-          font-weight: bold;
-          font-size: 15px;
-        }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Skills</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#0a0a23;color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 50px;background:#0d0d2b;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:700} .logo span{color:#42a5f5}
+nav ul{display:flex;gap:25px;list-style:none;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;transition:.3s} nav a:hover{color:#42a5f5}
+.cv-btn{background:#ff4081;padding:10px 18px;border:none;border-radius:6px}
+.cv-btn a{text-decoration:none;color:#fff;font-weight:600}
+section{max-width:1000px;margin:auto;padding:70px 20px}
+h1{text-align:center;font-size:42px;color:#42a5f5}
+.sub{text-align:center;color:#9bb3d6;margin:12px 0 45px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.skill-card{position:relative;padding:24px;border-radius:22px;background:rgba(255,255,255,.05);backdrop-filter:blur(12px);overflow:hidden;border:1px solid rgba(255,255,255,.08);transition:.45s;animation:float 5s ease-in-out infinite}
+.skill-card:nth-child(even){animation-delay:.8s}
+.skill-card::before{content:"";position:absolute;inset:0;padding:2px;border-radius:22px;background:linear-gradient(130deg,#42a5f5,#00d4ff,#42a5f5);background-size:250%;
+-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;mask-composite:exclude;animation:border 5s linear infinite}
+.skill-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 15px 35px rgba(66,165,245,.3)}
+.top{display:flex;align-items:center;gap:18px}
+.icon{width:64px;height:64px;border-radius:50%;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#42a5f5,#1d8ef5);box-shadow:0 0 20px rgba(66,165,245,.45);font-size:30px}
+.info{flex:1}
+.info h3{font-size:20px}
+.info small{color:#c7d5ec}
+.percent{background:#42a5f5;padding:8px 15px;border-radius:50px;font-weight:700}
+.bar{margin-top:22px;height:14px;background:#181845;border-radius:50px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,#42a5f5,#00d4ff,#42a5f5);background-size:200%;border-radius:50px;animation:grad 3s linear infinite;transition:width 1.8s ease}
+footer{margin-top:60px;background:#0d0d2b;padding:35px;text-align:center;color:#ccc}
+@keyframes border{to{background-position:250%}}
+@keyframes grad{to{background-position:200%}}
+@keyframes float{50%{transform:translateY(-5px)}}
+@media(max-width:768px){header{justify-content:center;gap:15px}h1{font-size:34px}}
+</style>
 </head>
 <body>
+<header>
+<div class="logo">Jivesh<span>Saini</span></div>
+<nav><ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skill.html">Skills</a></li>
+<li><a href="service.html">Services</a></li>
+<li><a href="project.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></nav>
+<button class="cv-btn"><a href="cv.html">View CV</a></button>
+</header>
 
-  <header>
-    <div class="logo">Jivesh<span>Saini</span></div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="cv-btn"><a href="cv.html">View CV</a></button>
-  </header>
+<section>
+<h1>Data Analytics Skills</h1>
+<p class="sub">Modern animated skill cards built for a professional data analyst portfolio.</p>
+<div class="grid">
 
-  <!-- <section class="skills-section">
-    <h1>My Skills</h1>
-
-    <div class="skill">
-      <div class="skill-title">
-        <div class="skill-name">
-          <i class="fab fa-html5"></i> HTML
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fas fa-file-excel"></i></div>
+        <div class="info">
+          <h3>Microsoft Excel</h3>
+          <small>92% Proficiency</small>
         </div>
-        <span>99%</span>
+        <div class="percent">92%</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress" data-progress="99%"></div>
-      </div>
+      <div class="bar"><div class="fill" data-width="92%"></div></div>
     </div>
 
-    <div class="skill">
-      <div class="skill-title">
-        <div class="skill-name">
-          <i class="fab fa-css3-alt"></i> CSS
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fas fa-database"></i></div>
+        <div class="info">
+          <h3>SQL</h3>
+          <small>90% Proficiency</small>
         </div>
-        <span>92%</span>
+        <div class="percent">90%</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress" data-progress="92%"></div>
-      </div>
+      <div class="bar"><div class="fill" data-width="90%"></div></div>
     </div>
 
-    <div class="skill">
-      <div class="skill-title">
-        <div class="skill-name">
-          <i class="fab fa-js-square"></i> JavaScript
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fab fa-python"></i></div>
+        <div class="info">
+          <h3>Python</h3>
+          <small>85% Proficiency</small>
         </div>
-        <span>90%</span>
+        <div class="percent">85%</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress" data-progress="90%"></div>
-      </div>
+      <div class="bar"><div class="fill" data-width="85%"></div></div>
     </div>
 
-    <div class="skill">
-      <div class="skill-title">
-        <div class="skill-name">
-          <i class="fab fa-react"></i> React JS
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="devicon-pandas-original"></i></div>
+        <div class="info">
+          <h3>Pandas</h3>
+          <small>82% Proficiency</small>
         </div>
-        <span>78%</span>
+        <div class="percent">82%</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress" data-progress="78%"></div>
-      </div>
+      <div class="bar"><div class="fill" data-width="82%"></div></div>
     </div>
 
-    <div class="skill">
-      <div class="skill-title">
-        <div class="skill-name">
-          <i class="fab fa-github"></i> GitHub
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="devicon-numpy-original"></i></div>
+        <div class="info">
+          <h3>NumPy</h3>
+          <small>78% Proficiency</small>
         </div>
-        <span>85%</span>
+        <div class="percent">78%</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress" data-progress="85%"></div>
-      </div>
+      <div class="bar"><div class="fill" data-width="78%"></div></div>
     </div>
 
-    <div class="skill">
-      <div class="skill-title">
-        <div class="skill-name">
-          <i class="fab fa-c"></i> C Language
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="devicon-powerbi-plain"></i></div>
+        <div class="info">
+          <h3>Power BI</h3>
+          <small>88% Proficiency</small>
         </div>
-        <span>86%</span>
+        <div class="percent">88%</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress" data-progress="86%"></div>
+      <div class="bar"><div class="fill" data-width="88%"></div></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fas fa-chart-line"></i></div>
+        <div class="info">
+          <h3>Data Visualization</h3>
+          <small>90% Proficiency</small>
+        </div>
+        <div class="percent">90%</div>
       </div>
+      <div class="bar"><div class="fill" data-width="90%"></div></div>
     </div>
 
-  </section> -->
-
-  <section class="skills-section">
-  <h1>My Data Analytics Skills</h1>
-
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-file-excel"></i> Microsoft Excel
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fas fa-broom"></i></div>
+        <div class="info">
+          <h3>Data Cleaning</h3>
+          <small>86% Proficiency</small>
+        </div>
+        <div class="percent">86%</div>
       </div>
-      <span>92%</span>
+      <div class="bar"><div class="fill" data-width="86%"></div></div>
     </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="92%"></div>
-    </div>
-  </div>
 
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-database"></i> SQL
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="info">
+          <h3>Dashboard Design</h3>
+          <small>87% Proficiency</small>
+        </div>
+        <div class="percent">87%</div>
       </div>
-      <span>88%</span>
+      <div class="bar"><div class="fill" data-width="87%"></div></div>
     </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="88%"></div>
-    </div>
-  </div>
 
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fab fa-python"></i> Python
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fab fa-github"></i></div>
+        <div class="info">
+          <h3>Git & GitHub</h3>
+          <small>80% Proficiency</small>
+        </div>
+        <div class="percent">80%</div>
       </div>
-      <span>82%</span>
+      <div class="bar"><div class="fill" data-width="80%"></div></div>
     </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="82%"></div>
-    </div>
-  </div>
 
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-chart-column"></i> Power BI
+    <div class="skill-card">
+      <div class="top">
+        <div class="icon"><i class="fas fa-brain"></i></div>
+        <div class="info">
+          <h3>Problem Solving</h3>
+          <small>91% Proficiency</small>
+        </div>
+        <div class="percent">91%</div>
       </div>
-      <span>85%</span>
+      <div class="bar"><div class="fill" data-width="91%"></div></div>
     </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="85%"></div>
-    </div>
-  </div>
 
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-table"></i> Pandas
-      </div>
-      <span>80%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="80%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-chart-line"></i> Data Visualization
-      </div>
-      <span>84%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="84%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-brain"></i> Data Cleaning
-      </div>
-      <span>83%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="83%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-chart-pie"></i> Dashboard Design
-      </div>
-      <span>86%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="86%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fab fa-github"></i> Git & GitHub
-      </div>
-      <span>78%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="78%"></div>
-    </div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title">
-      <div class="skill-name">
-        <i class="fas fa-lightbulb"></i> Problem Solving
-      </div>
-      <span>90%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress" data-progress="90%"></div>
-    </div>
-  </div>
-
+</div>
 </section>
 
- <!-- ✅ Footer Section -->
-    <footer>
-        <h2>Contact Me</h2>
+<footer>
+<h2 style="color:#42a5f5;">Contact Me</h2>
+<p>Jivesh Saini</p>
+<p>jiveshsaini00@gmail.com</p>
+<p>© 2025 Jivesh Saini. All rights reserved.</p>
+</footer>
 
-        <p><i class="fas fa-signature"></i> <strong>Jivesh Saini</strong></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:jiveshsaini00@gmail.com">jiveshsaini00@gmail.com</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918607703228" target="_blank">+91 86077 03228</a></p>
-        <p><i class="fas fa-phone"></i> +91 89507 03228</p>
-        <p><i class="fas fa-map-marker-alt"></i> 389, Rajeev Nagar, Rewari, Haryana, India</p>
-
-        <hr />
-        <p>© 2025 Jivesh Saini. All rights reserved.</p>
-    </footer>
-
-  <!-- ✅ JavaScript for animated progress -->
-  <script>
-    window.addEventListener('load', () => {
-      const bars = document.querySelectorAll('.progress');
-      bars.forEach(bar => {
-        const target = bar.getAttribute('data-progress');
-        bar.style.width = target;
-      });
-    });
-  </script>
-
+<script>
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.width;}});
+},{threshold:.4});
+document.querySelectorAll('.fill').forEach(f=>observer.observe(f));
+</script>
 </body>
 </html>
