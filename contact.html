@@ -270,7 +270,7 @@ required></textarea>
         <hr />
         <p>© 2025 Jivesh Saini. All rights reserved.</p>
     </footer>
-   <script>
+   <!-- <script>
   const scriptURL = "https://script.google.com/macros/s/AKfycbyMAsA4d-cC1x2j819yTZO3nRDw8DNagw3GI-ZjgU7JegTL14OVTDkr3N2CG-V5tuDJdg/exec";
 
 const form = document.getElementById("contactForm");
@@ -315,7 +315,49 @@ form.addEventListener("submit", async function(e){
        document.getElementById("successMessage").style.display = "block";
 form.reset();
 
-</script>
+</script> -->
+
+  const scriptURL = "YOUR_WEB_APP_URL";
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+    };
+
+    try{
+
+        const response = await fetch(scriptURL,{
+            method:"POST",
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if(result.success){
+
+            document.getElementById("successMessage").style.display = "block";
+
+            form.reset();
+
+        }
+
+    }catch(error){
+
+        alert("Error sending message.");
+
+        console.log(error);
+
+    }
+
+});
 
 
 
